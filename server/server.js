@@ -10,6 +10,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.use(express.static(path.join(__dirname, '/public')));
+
 const newsapicall = async ()=>{
     // after luch the country and category will be dynamic we nned to make post request
     try{
